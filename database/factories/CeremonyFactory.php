@@ -18,8 +18,8 @@ class CeremonyFactory extends Factory
     {
         return [
             //
-            'name' => fake('ms_MY')->name(),
-            'description' => fake('ms_MY')->text($maxNbChars = 15),
+            'name' => fake('ms_MY')->firstName($gender = 'male'|'female'),
+            'description' => fake('ms_MY')->text($maxNbChars = 30),
             'avatar' => fake('ms_MY')->imageUrl(),
             'start_date' => fake('ms_MY')->date($format = 'Y-m-d', $max = 'now'),
             'end_date' => fake('ms_MY')->date($format = 'Y-m-d', $max = 'now'),
