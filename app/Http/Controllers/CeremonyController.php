@@ -14,10 +14,11 @@ class CeremonyController extends Controller
     public function index()
     {
         //
-        $ceremonies = Ceremony::paginate(10);
+        /* $ceremonies = Ceremony::paginate(10);
         return inertia('Ceremony/Index',[
             'ceremonies' => $ceremonies,
-        ]);
+        ]); */
+        return inertia('Ceremony/ApiIndex');
     }
 
     /**
